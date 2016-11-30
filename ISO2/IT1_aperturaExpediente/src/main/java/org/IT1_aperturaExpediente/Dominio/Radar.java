@@ -1,9 +1,13 @@
 package org.IT1_aperturaExpediente.Dominio;
+/*
+Version 1.1.0 Se ha añadido un nuevo constructor de Radar.
 
+*/
 
 import java.util.Random;
 
 import org.IT1_aperturaExpediente.Persistencia.*;
+
 public class Radar {
 	private String localizacion;
 	private int velocidadRadar;
@@ -13,6 +17,11 @@ public class Radar {
 		this.localizacion = localizacion;
 		this.velocidadRadar=velocidadRadar;
 		leer_VehiculoAleatorio();
+	}
+	public Radar(String localizacion,int velocidadRadar,int velocidad,int matricula){
+		this.localizacion=localizacion;
+		this.velocidadRadar=velocidadRadar;
+		veh=new Vehiculo(velocidad,matricula,1);
 	}
 	
 	public int getVelocidadRadar() {

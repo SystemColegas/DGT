@@ -68,7 +68,7 @@ public class Interface extends JPanel {
 		panel.setLayout(new BorderLayout(0, 0));
 		
 		scrollPane = new JScrollPane();
-		panel.add(scrollPane, BorderLayout.CENTER);
+		panel.add(scrollPane);
 		
 		table = new JTable();
 	
@@ -85,7 +85,7 @@ public class Interface extends JPanel {
 			
 			lblNewLabel = new JLabel("");
 			lblNewLabel.setIcon(new ImageIcon(Interface.class.getResource("/org/IT1_aperturaExpediente/Presentacion/dgtImagen.png")));
-			lblNewLabel.setBounds(167, 12, 318, 80);
+			lblNewLabel.setBounds(154, 12, 318, 80);
 			frame.getContentPane().add(lblNewLabel);
 			
 			btnIniciar.addActionListener(new ActionListener() {

@@ -1,5 +1,8 @@
 package org.IT1_aperturaExpediente.Dominio;
+/*
+Version 1.1.0 Se ha añadido un nuevo constructor de expediente.
 
+*/
 import org.IT1_aperturaExpediente.Persistencia.*;
 
 public class Expediente {
@@ -8,6 +11,9 @@ public class Expediente {
 	public Expediente(Radar radar,int n){
 		this.radar=radar;
 		this.n=n;
+	}
+	public Expediente(int n,int matri,int velocidad, int velmax,String localizacion){
+		radar=new Radar(localizacion,velmax,velocidad,matri);
 	}
 	public void insertarExpediente(){
 		try {

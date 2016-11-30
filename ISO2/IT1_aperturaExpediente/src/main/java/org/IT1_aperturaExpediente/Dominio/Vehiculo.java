@@ -1,5 +1,9 @@
 package org.IT1_aperturaExpediente.Dominio;
 
+/*
+Version 1.1.0 Se ha añadido un nuevo constructor de Vehiculo.
+
+*/
 import java.util.Random;
 
 public class Vehiculo {
@@ -16,6 +20,10 @@ public class Vehiculo {
 		velocidad  = 0; 
 		multado = false;
 		generarVelocidad();
+	}
+	public Vehiculo(int matricula,int velocidad,int n){
+		this.matricula=matricula;
+		this.velocidad=velocidad;
 	}
 	
 	public void generarVelocidad(){
