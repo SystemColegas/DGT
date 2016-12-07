@@ -3,19 +3,19 @@ package org.IT2_sancionConductor.Dominio;
  *  
  * class Sancion version 1.0.1 -> Ya que hacia falta un atributo id
  * 
- * 
- * 
+ * Sancion v 1.1.0 Se han añadido metodos set y get para las variables.
+ * Sancion v 1.1.1 Se han puesto algunas variables como privadas ya que estaban como publicas.
  */
-import IT1.Dominio.Expediente;
+import org.IT1_aperturaExpediente.Dominio.*;
 
 public class Sancion {
 
-	int id;
-	Expediente exp;
-	int dniConductor;
-	boolean pagado;
-	int puntos;
-	int importePagar;
+	private int id;
+	private Expediente exp;
+	private int dniConductor;
+	private boolean pagado;
+	private int puntos;
+	private int importePagar;
 	
 	public Sancion(Expediente exp,String nombre){
 		this.exp=exp;
@@ -35,6 +35,42 @@ public class Sancion {
 	private int leerDNI(String nombre) {
 
 		return 0;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Expediente getExp() {
+		return exp;
+	}
+	public void setExp(Expediente exp) {
+		this.exp = exp;
+	}
+	public int getDniConductor() {
+		return dniConductor;
+	}
+	public void setDniConductor(int dniConductor) {
+		this.dniConductor = dniConductor;
+	}
+	public boolean isPagado() {
+		return pagado;
+	}
+	public void setPagado(boolean pagado) {
+		this.pagado = pagado;
+	}
+	public int getPuntos() {
+		return puntos;
+	}
+	public void setPuntos(int puntos) {
+		this.puntos = puntos;
+	}
+	public int getImportePagar() {
+		return importePagar;
+	}
+	public void setImportePagar(int importePagar) {
+		this.importePagar = importePagar;
 	}
 
 }

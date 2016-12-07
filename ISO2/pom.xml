@@ -26,5 +26,6 @@
   	<module>IT1_aperturaExpediente</module>
     <module>IT2_sancionConductor</module>
     <module>ControlSancion</module>
+    <module>IT4_CambioPropietario</module>
   </modules>
 </project>

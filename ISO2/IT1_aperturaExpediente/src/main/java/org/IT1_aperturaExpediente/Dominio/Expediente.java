@@ -24,4 +24,16 @@ public class Expediente {
 			e.printStackTrace();
 		}
 	}
+	public Radar getRadar() {
+		return radar;
+	}
+	public void setRadar(Radar radar) {
+		this.radar = radar;
+	}
+	public int getN() {
+		return n;
+	}
+	public void setN(int n) {
+		this.n = n;
+	}
 }

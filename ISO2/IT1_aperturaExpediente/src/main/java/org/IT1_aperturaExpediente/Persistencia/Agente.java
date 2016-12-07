@@ -1,6 +1,18 @@
-package org.IT1_aperturaExpediente.Persistencia;
 
+
+package org.IT1_aperturaExpediente.Persistencia;
+/*               //////////////////  Control de Versiones en Agente.java  //////////
+ * 
+ * Version 1.1.0 Se ha añadido un metodo leerGeneral() para poder hacer lecturas a la base de datos de cualquier tabla
+ * Version 1.1.1 Se ha corregido un error en el metodo leerGeneral()
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Agente {
 
@@ -55,6 +67,21 @@ public class Agente {
     	stmt.close();
     	desconectar();
     	return res;
+    }
+    public ArrayList<Object> leerGeneral(String cadena,int n) throws Exception{
+    	conectar();
+		Statement s;
+		ArrayList<Object> lista=new ArrayList<Object>();
+			s = mBD.createStatement();
+			int i=1;
+			ResultSet rs = s.executeQuery(cadena);
+			while (rs.next()){
+				lista.add(rs.getInt(i));
+				i++;
+			}
+			desconectar();
+			return lista;
+    	
     }
 	public int leer(String cadena) throws Exception {
 		conectar();
