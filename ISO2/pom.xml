@@ -27,5 +27,6 @@
     <module>IT2_sancionConductor</module>
     <module>ControlSancion</module>
     <module>IT4_CambioPropietario</module>
+    <module>IT_N</module>
   </modules>
 </project>

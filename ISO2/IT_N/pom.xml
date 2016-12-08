@@ -7,8 +7,10 @@
     <groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>IT4_CambioPropietario</artifactId>
-  <name>IT4_CambioPropietario</name>
+  <groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
+  <artifactId>IT_N</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>IT_N</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,12 +24,22 @@
     </dependency>
     <dependency>
     	<groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
-    	<artifactId>ControlSancion</artifactId>
+    	<artifactId>IT2_sancionConductor</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
     	<groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
     	<artifactId>IT1_aperturaExpediente</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
+    	<artifactId>ControlSancion</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>es.uclm.esi.isoft2.SystemColegas</groupId>
+    	<artifactId>IT4_CambioPropietario</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>

@@ -1,9 +1,7 @@
 package org.IT4_CambioPropietario.Persistencia;
 
 import java.sql.SQLException;
-
 import org.IT1_aperturaExpediente.Persistencia.Agente;
-
 public class AuxPropietario {
 	private Agente a;
 	public AuxPropietario() throws Exception{

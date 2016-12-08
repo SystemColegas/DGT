@@ -19,8 +19,9 @@ import org.IT2_sancionConductor.Dominio.GestorSancion;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Dimension;
 
-public class Interface extends JPanel {
+public class Interface_2 extends JPanel {
 	private JPanel panel;
 	private JLabel lblDniConductor;
 	private JTextField textField;
@@ -33,25 +34,32 @@ public class Interface extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public Interface() {
-		setLayout(new BorderLayout(0, 0));
+	public Interface_2() {
 		modelo= new DefaultListModel<Integer>();
+		setLayout(null);
 		panel = new JPanel();
-		add(panel, BorderLayout.SOUTH);
+		panel.setBounds(0, 216, 450, 84);
+		
+		add(panel);
+		panel.setLayout(null);
 		
 		lblDniConductor = new JLabel("DNI Conductor: ");
+		lblDniConductor.setBounds(40, 32, 122, 20);
 		panel.add(lblDniConductor);
 		
 		textField = new JTextField();
+		textField.setBounds(168, 30, 114, 22);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		btnSancionar = new JButton("Sancionar");
+		btnSancionar.setBounds(308, 27, 105, 25);
 		btnSancionar.addActionListener(new BtnSancionarActionListener());
 		panel.add(btnSancionar);
 		
 		scrollPane = new JScrollPane();
-		add(scrollPane, BorderLayout.CENTER);
+		scrollPane.setBounds(0, 0, 450, 216);
+		add(scrollPane);
 		
 		scrollBar = new JScrollBar();
 		scrollPane.setRowHeaderView(scrollBar);
@@ -67,6 +75,7 @@ public class Interface extends JPanel {
 				return values[index];
 			}
 		});
+		panel.setMinimumSize(new Dimension(10, 15));
 		try{
 			g=new GestorSancion();
 			g.leerExpedientes();

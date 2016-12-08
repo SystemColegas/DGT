@@ -12,7 +12,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
 
-public class Interface extends JPanel {
+public class Interface4 extends JPanel {
 	private JPanel panel;
 	private JLabel lblDniConductor;
 	private JTextField textField;
@@ -24,24 +24,30 @@ public class Interface extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public Interface() {
-		setLayout(new BorderLayout(0, 0));
+	public Interface4() {
+		setLayout(null);
 		
 		panel = new JPanel();
-		add(panel, BorderLayout.SOUTH);
+		panel.setBounds(0, 215, 450, 85);
+		add(panel);
+		panel.setLayout(null);
 		
 		lblDniConductor = new JLabel("DNI Propietario Nuevo");
+		lblDniConductor.setBounds(24, 35, 156, 15);
 		panel.add(lblDniConductor);
 		
 		textField = new JTextField();
+		textField.setBounds(203, 33, 114, 19);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		btnSancionar = new JButton("Cambiar");
+		btnSancionar.setBounds(346, 30, 92, 25);
 		panel.add(btnSancionar);
 		
 		scrollPane = new JScrollPane();
-		add(scrollPane, BorderLayout.CENTER);
+		scrollPane.setBounds(0, 0, 450, 217);
+		add(scrollPane);
 		
 		scrollBar = new JScrollBar();
 		scrollPane.setRowHeaderView(scrollBar);
